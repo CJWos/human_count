@@ -1,9 +1,10 @@
+
 import cv2
 import socket
 
 # 소켓 설정
-HOST = "192.168.0.5"  # 안드로이드 디바이스의 IP 주소로 변경해야 합니다.
-PORT = 9021
+HOST = "192.168.0.15"  # 안드로이드 디바이스의 IP 주소로 변경해야 합니다.
+PORT = 8090
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
 s.bind((HOST, PORT))
@@ -12,8 +13,9 @@ s.listen(1)
 print('Socket now listening')
 
 # 물체 감지를 위한 설정
-prototxt = 'C:\\Users\\user\\Desktop\\pot\\MobileNetSSD_deploy.prototxt'
-model = 'C:\\Users\\user\\Desktop\\pot\\MobileNetSSD_deploy.caffemodel'
+prototxt ='/home/mdp1/Desktop/human_count-main/pot/MobileNetSSD_deploy.prototxt'
+
+model= '/home/mdp1/Desktop/human_count-main/pot/MobileNetSSD_deploy.caffemodel'
 min_confidence = 0.5
 
 # 클래스 레이블
