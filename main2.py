@@ -2,8 +2,8 @@ import cv2
 import socket
 
 # 소켓 설정
-HOST = "192.168.0.6"
-PORT = 9021
+HOST = "192.168.0.15"
+PORT = 8080
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
 s.bind((HOST, PORT))
