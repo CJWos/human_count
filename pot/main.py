@@ -1,9 +1,9 @@
 import cv2
 
 # 물체 감지를 위한 설정
-prototxt ='C:\\Users\\user\\Desktop\\pot\\MobileNetSSD_deploy.prototxt'
+prototxt ='/home/mdp1/Desktop/human_count-main/pot/MobileNetSSD_deploy.prototxt'
 
-model= 'C:\\Users\\user\\Desktop\\pot\\MobileNetSSD_deploy.caffemodel'
+model= '/home/mdp1/Desktop/human_count-main/pot/MobileNetSSD_deploy.caffemodel'
 
 min_confidence = 0.5
 
