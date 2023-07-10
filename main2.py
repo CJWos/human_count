@@ -137,3 +137,26 @@ while True:
 s.close()
 cap.release()
 cv2.destroyAllWindows()
+
+try {
+    // 데이터 수신
+    InputStream inputStream = socket.getInputStream();
+    BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+    String data = reader.readLine();
+
+    // 데이터 처리
+    if (data != null) {
+        String[] values = data.split(":");
+        String objectCount = values[0];
+        String temperature = values[1];
+        String humidity = values[2];
+
+        // 각 값에 대한 처리
+        // 예: 텍스트뷰에 값 설정
+        objectCountTextView.setText("Detected Objects: " + objectCount);
+        temperatureTextView.setText("Temperature: " + temperature);
+        humidityTextView.setText("Humidity: " + humidity);
+    }
+} catch (IOException e) {
+    e.printStackTrace();
+}
